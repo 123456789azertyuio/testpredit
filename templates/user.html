@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Utilisateur</title>
+</head>
+<body>
+    <h2>Entrer les paramètres</h2>
+    <form method="POST">
+        <label for="vmin">vmin:</label>
+        <input type="text" name="vmin" required>
+        <br>
+        <label for="vmax">vmax:</label>
+        <input type="text" name="vmax" required>
+        <br>
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if tables %}
+        <h3>Résultats</h3>
+        {{ tables[0]|safe }}
+    {% endif %}
+
+    <p><a href="{{ url_for('home') }}">Retour</a></p>
+</body>
+</html>

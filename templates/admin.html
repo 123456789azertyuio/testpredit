@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>Admin</title>
+</head>
+<body>
+    <h2>Importer une base de données</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Importer</button>
+    </form>
+    <p><a href="{{ url_for('home') }}">Retour</a></p>
+</body>
+</html>
